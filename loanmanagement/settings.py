@@ -9,7 +9,8 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import os
+import dj_database_url
 from pathlib import Path
 from datetime import timedelta
 
@@ -83,14 +84,16 @@ WSGI_APPLICATION = 'loanmanagement.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'loan_db',
-        'USER' : 'postgres',
-        'PASSWORD' : '0987',
-        'HOST' : 'localhost',
-        'PORT' : '5432'
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'loan_db',
+    #     'USER' : 'postgres',
+    #     'PASSWORD' : '0987',
+    #     'HOST' : 'localhost',
+    #     'PORT' : '5432'
+    # }
+
+     'default': dj_database_url.config(default=os.getenv('postgresql://loan_postgres_p4zr_user:ojgR9uTLzaR2XkqkoxI75nyRasYO0cF9@dpg-cv2oalan91rc73c016lg-a/loan_postgres_p4zr'))
 }
 
 REST_FRAMEWORK = {
