@@ -93,8 +93,7 @@ DATABASES = {
     #     'HOST' : 'localhost',
     #     'PORT' : '5432'
     # }
-
-     'default': dj_database_url.config(default=os.getenv('postgresql://loan_postgres_p4zr_user:ojgR9uTLzaR2XkqkoxI75nyRasYO0cF9@dpg-cv2oalan91rc73c016lg-a/loan_postgres_p4zr'))
+  'default': dj_database_url.parse("postgresql://loan_postgres_p4zr_user:ojgR9uTLzaR2XkqkoxI75nyRasYO0cF9@dpg-cv2oalan91rc73c016lg-a/loan_postgres_p4zr")
 }
 
 REST_FRAMEWORK = {
