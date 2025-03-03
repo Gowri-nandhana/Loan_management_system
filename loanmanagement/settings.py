@@ -27,9 +27,7 @@ SECRET_KEY = 'django-insecure-23sks9r4keox8+z4yl3zaojoxuf0y#fvu+&zn82oo9i$-3=570
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'loan-management-system-8y0r.onrender.com'
-]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -93,7 +91,11 @@ DATABASES = {
     #     'HOST' : 'localhost',
     #     'PORT' : '5432'
     # }
-  'default': dj_database_url.parse("postgresql://loan_postgres_p4zr_user:ojgR9uTLzaR2XkqkoxI75nyRasYO0cF9@dpg-cv2oalan91rc73c016lg-a/loan_postgres_p4zr")
+  'default': dj_database_url.parse(
+        "postgresql://loan_postgres_p4zr_user:ojgR9uTLzaR2XkqkoxI75nyRasYO0cF9@dpg-cv2oalan91rc73c016lg-a.oregon-postgres.render.com/loan_postgres_p4zr",
+        conn_max_age=600,
+    )
+
 }
 
 REST_FRAMEWORK = {
