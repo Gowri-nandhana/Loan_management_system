@@ -22,7 +22,7 @@ The Loan Management System is a Django-based REST API for managing loans with mo
 ## Installation
 
 # Clone the repository
-git clone <repo-url>
+git clone "https://github.com/Gowri-nandhana/Loan_management_system.git"
 cd loanmanagement
 
 # Install dependencies
