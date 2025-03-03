@@ -1,6 +1,26 @@
-Django
-djangorestframework
-djangorestframework-simplejwt
-django-cors-headers
-psycopg2-binary  # For PostgreSQL
-gunicorn  # For deployment
+asgiref==3.8.1
+certifi==2025.1.31
+charset-normalizer==3.4.1
+click==8.1.8
+colorama==0.4.6
+crispy-bootstrap4==2024.10
+djangify==1.0.0
+Django==5.1.4
+django-cors-headers==4.7.0
+django-crispy-forms==2.3
+djangorestframework==3.15.2
+djangorestframework_simplejwt==5.5.0
+gunicorn==23.0.0
+h11==0.14.0
+idna==3.10
+mysqlclient==2.2.6
+packaging==24.2
+pillow==11.1.0
+psycopg2==2.9.10
+PyJWT==2.9.0
+requests==2.32.3
+sqlparse==0.5.3
+tzdata==2024.2
+urllib3==2.3.0
+uvicorn==0.34.0
+whitenoise==6.9.0
